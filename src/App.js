@@ -26,10 +26,12 @@ function App() {
 
       <br />
       {/* Chciałbym aby strona składała  się  z sekcji: */}
-      < Background >
+
+      < Background />
+      <div>
         < TopMenu />
         < HeroSection />
-      </Background>
+        </div>
       {/* <ul>
 
         <li>Hero section z obrazkiem  w tle

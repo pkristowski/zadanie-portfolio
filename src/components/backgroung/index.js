@@ -1,15 +1,8 @@
-import React from 'react'
-//import img from 'C:\Users\adm\Documents\JavaScript\zadanie-portfolio\zadanie-portfolio\src\images\1.jpg'
+import React from 'react';
+import { homepage } from '../../homepage.const';
 
-export default function Background(props){
+export default function Background(){
     return (
-        <div>
-            <div>
-                {props.children[0]}
-            </div>
-            <div>
-                {props.children[1]}
-            </div>
-        </div>
+        <img style={{height: "100%", width: "100%", position: "fixed", top: "0%", left: "0%", marginTop: "0px", marginLeft: "0px"}} src={homepage.hero.images[1]}/>
     )
 };
