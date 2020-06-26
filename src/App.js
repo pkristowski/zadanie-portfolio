@@ -5,6 +5,7 @@ import './App.css';
 import TopMenu from './components/topMenu';
 import HeroSection from './components/heroSection';
 import Background from './components/backgroung';
+import Button from './components/button';
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
       <div>
         < TopMenu />
         < HeroSection />
-        </div>
+      </div>
+      < Button />
       {/* <ul>
 
         <li>Hero section z obrazkiem  w tle
