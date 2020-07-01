@@ -1,9 +1,13 @@
 import React from 'react';
+import Service from './components/Service';
 
-export default function OurServices() {
+export default function OurServices({ title, service }) {
     return (
-        <div>
-            OurServices
+        <div className={`container ${s.root}`}>
+            <h3 className="mb-5">{title}</h3>
+            <div classname="d-flex">
+                {service.map((singleService) => (<Service {..singleService} />))}
+            </div>
         </div>
     )
 }

@@ -1,9 +1,19 @@
 import React from 'react';
+import Project from '../Project';
 
-export default function OurProjects() {
+export default function OurProjects({ title, service }) {
     return (
-        <div>
-            OurProjects
-        </div>
+        <div className="container-fluid">
+            <div className={s.root}>
+                <h3 className="mb-5">{title}</h3>
+                <div className="row">
+                    {service.map((project) => (
+                        <div className="col-4 position-relative">
+                            <Project {...project} />
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div>
     )
 }
