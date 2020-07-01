@@ -7,7 +7,7 @@ export default function OurServices({ title, service }) {
         <div className={`container ${s.root}`}>
             <h3 className="mb-5">{title}</h3>
             <div classname="d-flex">
-                {service.map((singleService) => (<Service {..singleService} />))}
+                {service.map((singleService) => (<Service {...singleService} />))}
             </div>
         </div>
     )
