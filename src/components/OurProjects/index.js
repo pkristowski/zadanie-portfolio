@@ -1,5 +1,6 @@
 import React from 'react';
 import Project from '../Project';
+import s from './style.module.css';
 
 export default function OurProjects({ title, service }) {
     return (
@@ -14,6 +15,6 @@ export default function OurProjects({ title, service }) {
                     ))}
                 </div>
             </div>
-            <div>
+        </div>
     )
 }

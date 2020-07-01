@@ -1,5 +1,6 @@
 import React from 'react';
 import Service from './components/Service';
+import s from './style.module.css';
 
 export default function OurServices({ title, service }) {
     return (

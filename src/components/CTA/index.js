@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './style.module.css';
 
 export default function CTA({ title, subtitle, background, opacity, button }) {
     return (
