@@ -18,13 +18,13 @@ function App() {
 <div>
       < Background />
       
-        <Header logo={} menu={} />
-        <Hero {} />
+        <Header logo={companyName} menu={navigation} />
+        <Hero {...Hero} />
 
         <CTAComponent {...CTA} />
         <OurServices {...ourServices} />
         <OurProjects {...ourProjects} />
-        <CTAComponent {} />
+        <CTAComponent {...CTA2} />
         <BlogList {...blogs} />
         <Footer {...contact} {...contactDetails} />
       </div>
