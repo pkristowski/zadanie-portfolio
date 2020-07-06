@@ -19,6 +19,7 @@ import Blog from './Blog';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { homepage } from './homepage.const';
+import SingleBlog from './SingleBlog';
 
 
 function App() {
@@ -38,8 +39,11 @@ function App() {
       <div>
         <Route exact path="/" component={Main} />
         <Route
-          path="/blog" component={Blog}
-        />
+         exact path="/blog" component={Blog}
+        /> 
+        <Route
+          path="/blog/:id" component={SingleBlog}
+        />  
         <Route
           path="/movies"
           render={({ match }) => match && <h1>Movies</h1>}
