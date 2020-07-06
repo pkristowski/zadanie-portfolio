@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header({ logo, menu }) {
     return (
@@ -20,7 +21,10 @@ function Navigation({ menu }){
         <ul>
             {menu.map((item) => (
                 <li>
-                    <a href={item.link}>{item.title}</a>
+                    <Link to={item.link}>
+                    {item.title}
+                    </Link>
+                    {/* <a href={item.link}>{item.title}</a> */}
                 </li>
             ))}
         </ul>

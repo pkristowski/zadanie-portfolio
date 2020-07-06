@@ -1,35 +1,60 @@
 import React from 'react';
 import logo from './logo.svg';
-import { homepage } from './homepage.const.js';
 import './App.css';
-import Background from './components/backgroung';
+//import jakisDomyslny, { testowa, zmienna, zmienna2, zmienna3, zmienna4 } from './App.const.js';
+// import HelloWorld from './components';
+// import Clock from './components/clock';
+// import Message from './components';
+// import Click from './components';
+// import Image from './components/image';
+// import TwoColumns from './components/twoColumns';
+// import Hooks from './components/hookss';
+// import ClockHook from './components/clockHook';
+// import Text from './components/Text';
+// import Title from './components/Title';
+// import InputTest from './components/communication';
+import Main from './Main';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Blog from './Blog';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import CTAComponent from './components/CTA';
-import OurServices from './components/OurServices';
-import ourProjects from './components/OurProjects';
-import BlogList from './components/BlogList';
 import Footer from './components/Footer';
+import { homepage } from './homepage.const';
+
 
 function App() {
+
+  const {
+    companyName,
+    navigation,
+    contact,
+    contactDetails,
+} = homepage
+
+
   return (
+    <Router>
 
-
-<div>
-      < Background />
-      
-        <Header logo={companyName} menu={navigation} />
-        <Hero {...Hero} />
-
-        <CTAComponent {...CTA} />
-        <OurServices {...ourServices} />
-        <OurProjects {...ourProjects} />
-        <CTAComponent {...CTA2} />
-        <BlogList {...blogs} />
-        <Footer {...contact} {...contactDetails} />
+      <Header logo={companyName} menu={navigation} />
+      <div>
+        <Route exact path="/" component={Main} />
+        <Route
+          path="/blog" component={Blog}
+        />
+        <Route
+          path="/movies"
+          render={({ match }) => match && <h1>Movies</h1>}
+        />
+        <Route
+          path="/actors"
+          render={({ match }) => match && <h1>Actors</h1>}
+        />
       </div>
- 
+
+      <Footer {...contact} {...contactDetails} />
+
+    </Router>
   );
+
 }
 
 export default App;

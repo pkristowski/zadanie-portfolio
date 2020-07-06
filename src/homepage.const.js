@@ -3,13 +3,13 @@ export const homepage = {
   navigation: [
     {
       title: 'O mnie',
-      link: '#omnie',
+      link: '/actors',
     }, {
       title: 'Portfolio',
-      link: '#portfolio',
+      link: '/movies',
     }, {
       title: 'Oferta',
-      link: '#oferta',
+      link: '/blog',
     }, {
       title: 'Kontakt',
       link: '#kontakt',
