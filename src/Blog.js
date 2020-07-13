@@ -8,7 +8,7 @@ import CTAComponent from './components/CTA';
 import OurServices from './components/OurServices';
 import OurProjects from './components/OurProjects';
 import BlogList from './components/BlogList';
-
+import Images from './components/images';
 
 export default function App() {
     const {
@@ -31,6 +31,7 @@ export default function App() {
         <div>
             {/* < Background /> */}
 
+            <Images />
 
             <BlogList {...blogs} />
 

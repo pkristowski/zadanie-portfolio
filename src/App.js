@@ -21,7 +21,6 @@ import Footer from './components/Footer';
 import { homepage } from './homepage.const';
 import SingleBlog from './SingleBlog';
 
-
 function App() {
 
   const {
@@ -29,21 +28,24 @@ function App() {
     navigation,
     contact,
     contactDetails,
-} = homepage
+  } = homepage
 
 
   return (
     <Router>
 
       <Header logo={companyName} menu={navigation} />
+
+      <div>
+      </div>
       <div>
         <Route exact path="/" component={Main} />
         <Route
-         exact path="/blog" component={Blog}
-        /> 
+          exact path="/blog" component={Blog}
+        />
         <Route
           path="/blog/:id" component={SingleBlog}
-        />  
+        />
         <Route
           path="/movies"
           render={({ match }) => match && <h1>Movies</h1>}
